@@ -3,6 +3,9 @@
 
 数据库文件暂时不上传
 
+
+
 框架：Spring MVC + Spring + Mybatis
 数据库：Oracle
 工具：idea
+其他：spring security + pagehelper
