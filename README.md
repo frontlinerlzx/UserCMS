@@ -32,10 +32,11 @@
         旅客表
 
 
-介绍：整个项目使用SSM框架来完成，利用三层架构MVC思想，表现层springmvc，业务逻辑层使用spring，持久层mybatis，并且使用spring整合springmvc和spring整个mybatis，使用spring来管理mybatis，所有的sql使用注解开发，spring用来减少耦合，使用大量的依赖注入。
+介绍：
+        整个项目使用SSM框架来完成，利用三层架构MVC思想，表现层springmvc，业务逻辑层使用spring，持久层mybatis，并且使用spring整合springmvc和 spring整个mybatis，使用spring来管理mybatis，所有的sql使用注解开发，spring用来减少耦合，使用大量的依赖注入。
 
-        模块：用户，角色，资源权限，订单，产品
-
+模块：
+        
         用户模块：登陆管理系统和使用管理系统，管理用户
 
         角色模块：赋予用户角色，得到不同的资源权限
@@ -46,7 +47,7 @@
 
         产品模块：管理产品
 
-难点：
+所有项目难点：
 
         1.分页查询：结合pagehelper来解决，前端使用el+jstl来完成分页获取参数
 
