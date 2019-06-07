@@ -33,6 +33,7 @@
 
 
 介绍：
+        
         整个项目使用SSM框架来完成，利用三层架构MVC思想，表现层springmvc，业务逻辑层使用spring，持久层mybatis，并且使用spring整合springmvc和 spring整个mybatis，使用spring来管理mybatis，所有的sql使用注解开发，spring用来减少耦合，使用大量的依赖注入。
 
 模块：
