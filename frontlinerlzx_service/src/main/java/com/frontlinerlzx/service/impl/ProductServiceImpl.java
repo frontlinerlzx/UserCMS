@@ -15,6 +15,7 @@ public class ProductServiceImpl implements IProductService {
 
     @Autowired
     private IProductDao productDao;
+
     public List<Product> findAll() throws Exception {
         return productDao.findAll();
     }

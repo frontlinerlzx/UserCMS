@@ -38,4 +38,11 @@ public interface IRoleDao {
 
     @Insert("insert into role_permission (roleId,permissionId) values (#{roleId},#{permissionId})")
     public  void addPermissionToRole(@Param("roleId") String roleId, @Param("permissionId") String permissionId);
+
+
+    @Delete("delete from users_role where roleId = #{id}")
+    public void deleteUserAndRole(String id) throws Exception;
+
+    @Delete("delete from role where id = #{id}")
+    void deleteById(String id) throws Exception;
 }

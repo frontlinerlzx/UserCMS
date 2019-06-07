@@ -36,5 +36,15 @@ public class PermissionController {
         return "redirect:findAll.do";
     }
 
+    /**
+     * 删除指定权限资源
+     */
+    @RequestMapping("/deleteById.do")
+    public String deleteById( String id ) throws Exception {
+        permissionService.deleteById(id);
+        return "redirect:findAll.do";
+    }
+
+
 
 }

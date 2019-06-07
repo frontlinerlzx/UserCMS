@@ -151,7 +151,6 @@
 											<td>${permission.url }</td>
 
 											<td class="text-center">
-												<a href="${pageContext.request.contextPath}/role/findById.do?id=${permission.id}" class="btn bg-olive btn-xs">详情</a>
 												<a href="${pageContext.request.contextPath}/user/findUserByIdAndAllRole.do?id=${permission.id}" class="btn bg-olive btn-xs">添加角色</a>
 											</td>
 										</tr>

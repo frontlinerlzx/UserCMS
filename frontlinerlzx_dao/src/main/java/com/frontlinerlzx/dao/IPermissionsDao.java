@@ -1,6 +1,7 @@
 package com.frontlinerlzx.dao;
 
 import com.frontlinerlzx.domain.Permission;
+import org.apache.ibatis.annotations.Delete;
 import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Select;
 
@@ -17,4 +18,9 @@ public interface IPermissionsDao {
 
     @Insert("insert into permission (permissionName,url) values (#{permissionName},#{url})")
     public void save(Permission permission) throws Exception;
+
+    @Delete("delete from role_permission where permissionId = #{id}")
+    public void deleteRoleAndPermission(String id)throws Exception;
+    @Delete("delete from permission where id = #{id} ")
+    public void deleteById(String id)throws Exception;
 }

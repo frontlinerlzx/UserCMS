@@ -40,4 +40,10 @@ public class RoleServiceImpl implements IRoleService {
             roleDao.addPermissionToRole(roleId, permissionId);
         }
     }
+
+    public void deleteById(String id) throws Exception {
+        roleDao.deleteUserAndRole(id);
+        roleDao.deleteById(id);
+
+    }
 }

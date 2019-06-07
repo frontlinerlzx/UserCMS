@@ -4,7 +4,6 @@ import com.frontlinerlzx.domain.Orders;
 import com.frontlinerlzx.service.IOrderService;
 import com.github.pagehelper.PageInfo;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.security.access.annotation.Secured;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -31,7 +30,7 @@ public class OrdersController {
 //    }
 
 
-    @Secured("ROLE_ADMIN")
+
     @RequestMapping("/findAll.do")
     public ModelAndView findAll(@RequestParam(name = "page", required = true, defaultValue = "1") Integer page, @RequestParam(name = "size", required = true, defaultValue = "2") Integer size) throws Exception {
         ModelAndView mv = new ModelAndView();
@@ -40,8 +39,6 @@ public class OrdersController {
         PageInfo pageInfo = new PageInfo(ordersList);
         mv.addObject("pageInfo",pageInfo);
         mv.setViewName("orders-page-list");
-
-
         return mv;
     }
 
@@ -56,4 +53,11 @@ public class OrdersController {
         return mv;
 
     }
+
+    @RequestMapping("/deleteById.do")
+    public String deleteById(@RequestParam(name = "id" , required = true) String id ) throws Exception {
+        orderService.deleteById(id);
+        return "redirect:findAll.do";
+    }
+
 }

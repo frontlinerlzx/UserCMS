@@ -26,4 +26,8 @@ public class OrderServiceImpl implements IOrderService {
     public Orders findById(String ordersId) throws Exception {
         return ordersDao.findById(ordersId);
     }
+
+    public void deleteById(String id) {
+
+    }
 }

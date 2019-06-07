@@ -11,4 +11,6 @@ public interface IPermissionService {
 
 
     public void save(Permission permission) throws  Exception;
+
+    public void deleteById(String id)throws Exception;
 }

@@ -1,7 +1,7 @@
 package com.frontlinerlzx.controller;
 
-import com.frontlinerlzx.service.IProductService;
 import com.frontlinerlzx.domain.Product;
+import com.frontlinerlzx.service.IProductService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -18,7 +18,7 @@ public class ProductController {
     private IProductService productService;
 
     @RequestMapping("save.do")
-    public String save(Product product){
+    public String save(Product product) throws Exception {
         productService.save(product);
 
         return "redirect:findAll.do";
@@ -38,4 +38,6 @@ public class ProductController {
         return mv;
 
     }
+
+
 }

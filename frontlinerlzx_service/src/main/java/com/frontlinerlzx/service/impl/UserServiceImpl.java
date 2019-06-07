@@ -82,4 +82,9 @@ public class UserServiceImpl implements IUserService {
         }
 
     }
+
+    public void deleteById(String id) throws Exception {
+        userDao.deleteRoleAndUser(id);
+        userDao.deleteById(id);
+    }
 }

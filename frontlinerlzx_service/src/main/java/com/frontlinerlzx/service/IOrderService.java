@@ -9,4 +9,6 @@ public interface IOrderService {
 
 
     Orders findById(String ordersId) throws Exception;
+
+    public void deleteById(String id);
 }

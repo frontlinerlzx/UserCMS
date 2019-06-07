@@ -33,6 +33,11 @@ public class UserController {
         return "redirect:findAll.do";
     }
 
+    /**
+     * 查询所有用户
+     * @return
+     * @throws Exception
+     */
     @RequestMapping("/findAll.do")
     @PreAuthorize("hasRole('ROLE_ADMIN')")
     public ModelAndView findAll() throws Exception {
@@ -46,6 +51,17 @@ public class UserController {
 
     }
 
+    /**
+     * 删除指定用户
+     *
+     */
+
+
+    @RequestMapping("/deleteById.do")
+    public String deleteById(@RequestParam(name = "id" , required = true) String id ) throws Exception {
+        userService.deleteById(id);
+        return "redirect:findAll.do";
+    }
     /**
      * 查询指定id的用户
      */
