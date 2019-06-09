@@ -7,6 +7,7 @@
     <groupId>com.frontlinerlzx_ssm</groupId>
     <artifactId>ssm</artifactId>
     <packaging>pom</packaging>
+
     <version>1.0-SNAPSHOT</version>
     <properties>
         <spring.version>5.0.2.RELEASE</spring.version>
